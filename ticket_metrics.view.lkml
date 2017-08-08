@@ -122,6 +122,7 @@ view: ticket_metrics {
 
   measure: avg_full_resolution_time_in_hours__business {
     type: average
+    label: "Average Solution in Hours"
     sql: ${full_resolution_time_in_hours__business} ;;
   }
 
@@ -233,6 +234,7 @@ view: ticket_metrics {
 
   measure: avg_reply_time_in_hours__business {
     type: average
+    label: "Average First Response in Hours"
     sql: ${reply_time_in_hours__business} ;;
   }
 
