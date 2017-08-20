@@ -57,6 +57,11 @@ view: tickets {
     sql: ${requesters.email} ;;
   }
 
+  dimension: requester_type {
+    type: string
+    sql: case when ${requester_email} like '%sprii.com%' then 'Internal' else 'External' end;;
+  }
+
   dimension: requester_id {
     description: "the requester is the customer who initiated the ticket"
     type: number
